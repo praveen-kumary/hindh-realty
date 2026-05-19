@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Project | Hindh Group</title>
+    <meta name="description" id="pageDesc" content="Premium BIAAPA approved plotted community by Hindh Group in North Bangalore.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container-wide">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><span>H</span></div>
+                <div class="logo-text"><strong>HINDH</strong><span>Group</span></div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html" class="active">Projects</a>
+                                <a href="gallery.html">Gallery</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-primary enquire-btn">Enquire Now</button>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+                <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <button class="btn btn-primary enquire-btn" style="margin-top: 1.5rem; width: 100%; justify-content: center;">Enquire Now</button>
+    </div>
+
+    <!-- Hero (populated by JS) -->
+    <section class="hero bg-ink" id="heroSection" style="min-height: 80vh; padding-bottom: 4rem;">
+        <img id="heroImg" src="" alt="" class="hero-bg" style="opacity: 0.5;">
+        <div class="hero-overlay"></div>
+        <div class="container-wide hero-content reveal" style="max-width: 1000px;">
+            <a href="projects.html" style="display: inline-flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(253,252,248,0.6); margin-bottom: 2rem; transition: color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(253,252,248,0.6)'">← All Projects</a>
+
+            <div id="heroStatus" class="project-status" style="position: relative; display: inline-flex; top: 0; left: 0; margin-bottom: 1.5rem;"></div>
+
+            <h1 id="heroTitle" style="font-size: clamp(2rem, 7vw, 6rem); margin-bottom: 1rem;"></h1>
+
+            <div id="heroLocation" style="font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; display: flex; align-items: center; gap: 8px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span id="heroLocationText"></span>
+            </div>
+
+            <p id="heroTagline" style="font-family: var(--font-display); font-size: 1.5rem; font-style: italic; color: rgba(253,252,248,0.75); max-width: 700px;"></p>
+
+            <!-- Stats Bar -->
+            <div id="heroStats" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(253,252,248,0.1); margin-top: 3rem; border: 1px solid rgba(253,252,248,0.1); border-radius: var(--radius); overflow: hidden;"></div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section" id="overviewSection">
+        <div class="container-wide" style="display: grid; grid-template-columns: 5fr 7fr; gap: 3.5rem; align-items: start;">
+            <div class="reveal">
+                <div class="section-header" style="margin-bottom: 0;">
+                    <div class="eyebrow">Overview</div>
+                    <h2 class="section-title">An address <em class="italic text-gold-deep">crafted with intent.</em></h2>
+                </div>
+            </div>
+            <div class="reveal" style="transition-delay: 0.15s;">
+                <div id="overviewText" style="font-size: 1.125rem; color: var(--ink-soft); line-height: 1.8;"></div>
+                <button id="overviewEnquireBtn" class="btn btn-primary enquire-btn" style="margin-top: 1.5rem;"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase -->
+    <section class="section" id="videoSection" style="padding-top: 0;">
+        <div class="container-wide">
+            <div class="reveal">
+                <div style="border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-elevated);">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                        <iframe src="https://www.youtube.com/embed/2iuekaOJ5Tw?autoplay=1&mute=1&loop=1&playlist=2iuekaOJ5Tw&controls=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="autoplay; encrypted-media" allowfullscreen title="Project Video Showcase" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="section bg-cream" id="highlightsSection">
+        <div class="container-wide">
+            <div class="section-header reveal">
+                <div class="eyebrow">Project Highlights</div>
+                <h2 class="section-title">Why this project, <em class="italic text-gold-deep">why now.</em></h2>
+            </div>
+            <div class="grid-4" id="highlightsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Master Plan -->
+    <section class="section bg-ink bg-noise" id="masterPlanSection">
+        <div class="container-wide">
+            <div class="section-header center reveal">
+                <div class="eyebrow" style="color:var(--gold);">Master Plan</div>
+                <h2 class="section-title" style="color:var(--cream);">Designed for <em class="italic text-gold">community living.</em></h2>
+                <p class="section-subtitle" style="color:rgba(253,252,248,0.6);">Every aspect of the layout has been meticulously planned — from road widths and green spaces to utility networks and security infrastructure.</p>
+            </div>
+            <div class="master-plan-grid" id="masterPlanGrid"></div>
+        </div>
+    </section>
+
+    <!-- Amenities & Approvals -->
+    <section class="section" id="amenitiesSection">
+        <div class="container-wide" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+            <div class="reveal">
+                <div class="eyebrow" style="margin-bottom: 1rem;">Amenities</div>
+                <h2 class="font-display" style="font-size: clamp(2rem, 3vw, 2.5rem); color: var(--ink); margin-bottom: 2rem;">Everything a premium gated community should be.</h2>
+                <ul id="amenitiesList" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;"></ul>
+            </div>
+            <div class="reveal" style="transition-delay: 0.15s;">
+                <div style="background: var(--ink); color: var(--cream); padding: 2.5rem; border-radius: var(--radius);">
+                    <div class="eyebrow" style="color: var(--gold); margin-bottom: 1rem;">Approvals & Compliance</div>
+                    <h2 class="font-display" style="font-size: clamp(2rem, 3vw, 2.5rem); color: var(--cream); margin-bottom: 2rem;">Legally watertight. Bank-loan ready.</h2>
+                    <ul id="approvalsList" style="list-style: none;"></ul>
+                    <div style="margin-top: 2.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(253,252,248,0.15);">
+                        <div>
+                            <svg style="margin: 0 auto 0.5rem; display: block;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/></svg>
+                            <div style="font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(253,252,248,0.6);">Loan Eligible</div>
+                        </div>
+                        <div>
+                            <svg style="margin: 0 auto 0.5rem; display: block;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22V6h6v16"/><path d="M4 10h16"/></svg>
+                            <div style="font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(253,252,248,0.6);">Construction Ready</div>
+                        </div>
+                        <div>
+                            <svg style="margin: 0 auto 0.5rem; display: block;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M2 20h20"/><path d="M5 20V4h4v16"/><path d="M15 20V8h4v12"/></svg>
+                            <div style="font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(253,252,248,0.6);">Surveyed & Demarcated</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Highlights -->
+    <section class="section bg-cream" id="investmentSection">
+        <div class="container-wide">
+            <div class="section-header center reveal">
+                <div class="eyebrow">Investment Potential</div>
+                <h2 class="section-title">Why invest <em class="italic text-gold-deep">here, now.</em></h2>
+                <p class="section-subtitle">North Bangalore's infrastructure boom is creating one of India's clearest land appreciation stories. Here's why this project sits at the center of it.</p>
+            </div>
+            <div class="grid-3" id="investmentGrid"></div>
+        </div>
+    </section>
+
+    <!-- Location & Distances -->
+    <section class="section" id="locationSection">
+        <div class="container-wide">
+            <div class="section-header reveal">
+                <div class="eyebrow">Location</div>
+                <h2 class="section-title">Located in the <em class="italic text-gold-deep">heart of growth.</em></h2>
+                <p id="locationSubtitle" class="section-subtitle"></p>
+            </div>
+            <div style="display: grid; grid-template-columns: 2fr 3fr; gap: 2.5rem; margin-top: 3.5rem;">
+                <div id="distancesList"></div>
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div style="aspect-ratio: 4/3; overflow: hidden; border-radius: var(--radius); border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow-soft);">
+                        <iframe id="projectMap" title="Project location map" src="" style="width: 100%; height: 100%; border: 0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighbourhood & Lifestyle -->
+    <section class="section bg-cream" id="neighbourhoodSection">
+        <div class="container-wide">
+            <div class="section-header center reveal">
+                <div class="eyebrow">Neighbourhood</div>
+                <h2 class="section-title">Everything you need, <em class="italic text-gold-deep">minutes away.</em></h2>
+                <p class="section-subtitle">Schools, hospitals, shopping, tech parks — the essentials of modern living are all within easy reach.</p>
+            </div>
+            <div class="neighbourhood-grid" id="neighbourhoodGrid"></div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallerySection">
+        <div class="container-wide">
+            <div class="section-header reveal">
+                <div class="eyebrow">Gallery</div>
+                <h2 class="section-title" id="galleryTitle">A glimpse into <em class="italic text-gold-deep">this project.</em></h2>
+            </div>
+            <div id="galleryGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 3rem;"></div>
+            <div style="margin-top: 2rem; text-align: center;">
+                <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ink-soft);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    Site walkthrough available on request
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section bg-gradient-gold" id="ctaSection">
+        <div class="container-wide" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;">
+            <h2 id="ctaTitle" class="font-display" style="font-size: clamp(2rem, 4vw, 3.5rem); color: var(--ink); line-height: 1.05;"></h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: flex-end;">
+                <button class="enquire-btn" style="background: var(--ink); color: var(--cream); padding: 1rem 2rem; font-size: 11px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; border: none; cursor: pointer; border-radius: var(--radius); transition: background 0.3s;" onmouseover="this.style.background='var(--ink-soft)'" onmouseout="this.style.background='var(--ink)'">Schedule Site Visit</button>
+                <a href="tel:+919343229999" style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(46,46,46,0.4); padding: 1rem 2rem; font-size: 11px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink); border-radius: var(--radius); transition: background 0.3s;" onmouseover="this.style.background='rgba(46,46,46,0.1)'" onmouseout="this.style.background='transparent'">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    +91 93432 29999
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Projects -->
+    <section class="section bg-cream" id="otherProjectsSection">
+        <div class="container-wide">
+            <div class="section-header reveal">
+                <div class="eyebrow">Explore More</div>
+                <h2 class="section-title">Other Hindh <em class="italic text-gold-deep">addresses.</em></h2>
+            </div>
+            <div class="grid-3" id="otherProjectsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container-wide">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1.5rem;">
+                        <div class="logo-icon" style="border-color: var(--gold);"><span style="color: var(--gold);">H</span></div>
+                        <div class="logo-text"><strong style="color: var(--cream);">HINDH</strong><span>Group</span></div>
+                    </div>
+                    <p style="font-size: 14px; color: rgba(253,252,248,0.6); line-height: 1.8; max-width: 300px;">Premium BIAAPA approved plotted communities in North Bangalore's fastest-growing corridors.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Projects</h4>
+                    <ul class="footer-links">
+                        <li><a href="project-detail.html?project=north-city">Hindh North City</a></li>
+                        <li><a href="project-detail.html?project=aero-city">Hindh Aero City</a></li>
+                        <li><a href="project-detail.html?project=garden-city">Hindh Garden City</a></li>
+                        <li><a href="project-detail.html?project=paradise">Hindh Paradise</a></li>
+                        <li><a href="project-detail.html?project=sahana">Hindh Sahana</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+919343229999">+91 93432 29999</a></li>
+                        <li><a href="mailto:info@hindhgroup.com">info@hindhgroup.com</a></li>
+                        <li><span style="font-size: 14px; color: rgba(253,252,248,0.7);">Devanahalli, North Bangalore</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 Hindh Group India. All rights reserved.</span>
+                <span>Crafted with precision.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+<div class="floating-contact-group">
+        <a href="https://wa.me/919343229999" target="_blank" class="fab-btn fab-whatsapp" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l1.65-3.8a9 9 0 113.4 2.9L3 21"/><path d="M9 10a.5.5 0 001 0V9a.5.5 0 00-1 0v1a5 5 0 005 5h1a.5.5 0 000-1h-1a.5.5 0 000 1"/></svg>
+        </a>
+        <a href="tel:+919343229999" class="fab-btn fab-call" aria-label="Call Us">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </a>
+        <a href="sms:+919343229999" class="fab-btn fab-sms" aria-label="Message Us">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z"/></svg>
+        </a>
+        <a href="mailto:info@hindhgroup.com" class="fab-btn fab-mail" aria-label="Email Us">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <button class="fab-btn fab-chat" id="floatingContactBtn" aria-label="Enquire Now">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        </button>
+    </div>
+
+    <!-- Enquire Drawer -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <aside class="drawer" id="enquireDrawer">
+        <div class="drawer-header">
+            <div><div class="eyebrow">Schedule Site Visit</div><h3 class="font-display" style="font-size:1.5rem;margin-top:4px;">Let's talk land.</h3></div>
+            <button class="drawer-close" id="drawerCloseBtn">✕</button>
+        </div>
+        <div class="drawer-body">
+            <p style="font-size:14px;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem;">Share your details below — our team will call you back within the hour with a personalised recommendation, current price list and a private site-visit invite.</p>
+            <form id="enquiryForm" style="display:flex;flex-direction:column;gap:1.25rem;">
+                <div><label style="display:block;font-size:10px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px;">Full Name *</label><input type="text" class="form-control" placeholder="Your name" required></div>
+                <div><label style="display:block;font-size:10px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px;">Mobile Number *</label><input type="tel" class="form-control" placeholder="+91 ..." required></div>
+                <div><label style="display:block;font-size:10px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px;">Interested In</label>
+                    <select class="form-control">
+                        <option>Hindh North City — Devanahalli</option>
+                        <option>Hindh Aero City — Devanahalli</option>
+                        <option>Hindh Sahana — Pre-launch</option>
+                        <option>Hindh Garden City — Doddaballapura</option>
+                        <option>Hindh Paradise — Vijaypura</option>
+                        <option>Hindh Prakruthi — Jangamakote</option>
+                        <option>I'm not sure — please advise</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary form-submit">Request Callback →</button>
+                <p style="font-size:10px;color:var(--ink-soft);text-align:center;">By submitting you agree to be contacted by Hindh Group.</p>
+            </form>
+        </div>
+        <div class="drawer-footer">
+            <a href="tel:+919343229999"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold-deep)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +91 93432 29999</a>
+            <a href="mailto:info@hindhgroup.com"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold-deep)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@hindhgroup.com</a>
+        </div>
+    </aside>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
